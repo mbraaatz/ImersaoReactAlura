@@ -1,26 +1,36 @@
-/* Reset simples feito pelo mario alura */
+/* Reset tudo que fica tiver * vale para todo site */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /*Tamanha que for realmente definido do width e height*/
   font-family: 'Roboto', sans-serif;
 }
 
+/*root serve para usar variáveis*/
 :root {
   --primary: #DB202C;
   --black: #000000;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
+  --grayDark: #141414;
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
 }
-
+/*resetar margin e padding*/
 html,
 body {
   margin: 0;
   padding: 0;
 }
-
+/*pegar font igual a do pai*/
 a {
   color: inherit;
 } 
+
+#root {
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  display: flex;
+  flex-direction: column;
+}
+  
+

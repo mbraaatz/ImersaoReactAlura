@@ -1,15 +1,21 @@
 import React from 'react';
-import Menu from './Components/Menu'
-import dadosIniciais from './data/dados_iniciais.json';
-import BannerMain from './Components/BannerMain';
-import Carousel from './Components/Carousel';
-import Footer from './Components/Footer';
+import styled from 'styled-components';
+import Menu from '../../Components/Menu'
+import dadosIniciais from '../../data/dados_iniciais.json';
+import BannerMain from '../../Components/BannerMain';
+import Carousel from '../../Components/Carousel';
+import Footer from '../../Components/Footer';
 
+/*Wrapper: agrupador de conteudo*/
+/*Ao invens de usar backgroun: #141414 vc usar variavel ouxando a index.css*/
+const AppWrapper = styled.div`
+  background: var(--grayDark); 
+`;
 
-
-function App() {
+/*Div vai se tornar um AppWrapper*/
+function Home() {
   return (
-    <div style={{ background: "#141414" }}>
+    <AppWrapper>
       <Menu />
 
       <BannerMain
@@ -44,8 +50,8 @@ function App() {
       />      
 
       <Footer />
-    </div>
+    </AppWrapper>
   );
 }
 
-export default App;
+export default Home;
